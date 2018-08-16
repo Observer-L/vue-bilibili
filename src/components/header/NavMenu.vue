@@ -78,49 +78,13 @@
                   <div class="header-uname"><a href="https://github.com/Observer-L" target="_blank">Observer-L</a></div>
                   <img src="../../assets/logo.png">
                 </div>
-                <div
+
+                <vip
                   class="bili-header vip-m dd-bubble"
                   v-if="item.name === '大会员'"
                   v-show="isVipShow"
                 >
-                  <div class="bubble-traditional">
-                    <div class="recommand">
-                      <div class="title">
-                        精彩推荐
-                        <Btn :type="'more'"></Btn>
-                      </div>
-                      <div class="bubble-col bubble-col-1 bubble-col-2">
-                        <div class="item">
-                          <a class="pic" target="_blank" href="https://www.bilibili.com/blackboard/activity-big-2018summer.html">
-                            <div class="lazy-img">
-                              <img alt="缤纷福利，分享一夏" src="#" style="background: none">
-                            </div>
-                          </a>
-                          <a class="recommand-link" target="_blank" href="https://www.bilibili.com/blackboard/activity-big-2018summer.html">缤纷福利，分享一夏</a>
-                        </div>
-                        <div class="item">
-                          <a class="pic" target="_blank" href="https://www.bilibili.com/read/cv943631">
-                            <div class="lazy-img">
-                              <img alt="大会员游戏礼包更新" src="#" style="background: none">
-                            </div>
-                          </a>
-                          <a class="recommand-link" target="_blank" href="https://www.bilibili.com/read/cv943631">大会员游戏礼包更新</a>
-                        </div>
-                      </div>
-                      <div class="notify" style="color: tomato; font-size: 14px">notify组件</div>
-                      <!-- <div class="notify">
-                        <ul class="notify-list">
-                          <li>
-                            <span class="icon">通知</span>
-                            <a target="_blank" href="https://account.bilibili.com/account/points">
-                              积分够换1个月大会员，去兑换。
-                            </a>
-                          </li>
-                        </ul>
-                      </div> -->
-                    </div>
-                  </div>
-                </div>
+                </vip>
               </transition>
 
               <transition name="fade">
@@ -172,13 +136,14 @@
 import NavIframe from './Iframe'
 import DynamicIframe from './DynamicIframe'
 import List from './List'
-// import Btn from 'common/btn/Btn'
+import Vip from './Vip'
 export default {
   name: 'NavMenu',
   components: {
     NavIframe,
     DynamicIframe,
-    List
+    List,
+    Vip
   },
   data () {
     return {
@@ -546,68 +511,6 @@ export default {
       .header-uname
         font-weight bold
 .bili-header
-  .bubble-traditional
-    padding 14px
-    .recommand
-      .title
-        color #212121
-        font-size 14px
-        line-height 20px
-        margin 5px 0 12px
-        font-weight 900
-      .bubble-col
-        &.bubble-col-2
-          .item
-            display inline-block
-            width 50%
-            margin-bottom 7px
-            .pic
-              display inline-block
-            .recommand-link
-              display block
-              height 36px
-              line-height 18px
-              margin-top 10px
-              color #222
-              text-left left
-              font-size 12px
-              overflow hidden
-              display -webkit-box
-              -webkit-line-clamp 2
-              -webkit-box-orient vertical
-              ellipsis()
-            &:nth-child(2)
-              text-align right
-          img
-            display block
-            width 107px
-            height 143px
-            border-radius 4px
-            background #ccc
-    .notify
-      border-top 1px solid #f0f0f0
-      padding 11px 0 4px
-      .notify-list
-        font-size 12px
-        li
-          margin-top 18px
-          ellipsis()
-          .icon
-            display inline-block
-            width 32px
-            height 16px
-            line-height 16px
-            margin-right 6px
-            box-sizing border-box
-            border 1px solid #fb7299
-            border-radius 3px
-            color #fb7299
-            text-align center
-            -webkit-box-sizing border-box
-          &:first-child
-            margin-top 0
-          a
-            color #222
   .mini-wnd-nav
     position absolute
     left 0
@@ -627,15 +530,4 @@ export default {
       right -58px
     a
       transition color .2s
-  &.vip-m
-    position absolute
-    margin-left -107px
-    width 260px
-    border-radius 0 0 4px 4px
-    border 1px solid #e5e9ef
-    background-color #fff
-    box-shadow 0 2px 4px rgba(0,0,0,.16)
-    font-size 0
-    text-align left
-    z-index 7000
 </style>
