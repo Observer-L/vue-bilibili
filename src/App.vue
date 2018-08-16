@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BiliHeader from './components/common/BiliHeader'
+import BiliHeader from './components/header/BiliHeader'
 export default {
   name: 'App',
   components: {

@@ -87,7 +87,7 @@
                     <div class="recommand">
                       <div class="title">
                         精彩推荐
-                        <a href="#" style="color: tomato; position: absolute; right: 10px">按钮组件</a>
+                        <Btn :type="'more'"></Btn>
                       </div>
                       <div class="bubble-col bubble-col-1 bubble-col-2">
                         <div class="item">
@@ -172,6 +172,7 @@
 import NavIframe from './Iframe'
 import DynamicIframe from './DynamicIframe'
 import List from './List'
+// import Btn from 'common/btn/Btn'
 export default {
   name: 'NavMenu',
   components: {
@@ -551,6 +552,7 @@ export default {
       .title
         color #212121
         font-size 14px
+        line-height 20px
         margin 5px 0 12px
         font-weight 900
       .bubble-col
