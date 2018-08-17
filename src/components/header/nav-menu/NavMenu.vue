@@ -105,21 +105,21 @@
               <transition name="fade">
                 <list
                   class="watch-later mini-wnd-nav later-wnd dd-bubble"
-                  v-if="item.name === '稍后再看'"
+                  v-if="item.name === '稍后再看' && watchLaterList.records"
                   v-show="isWatchLaterShow"
                   :list="watchLaterList"
                 >
                 </list>
                 <list
                   class="favorites mini-wnd-nav favorite-wnd dd-bubble"
-                  v-if="item.name === '收藏夹'"
+                  v-if="item.name === '收藏夹' && collectionsList.records"
                   v-show="isCollectionShow"
                   :list="collectionsList"
                 >
                 </list>
                 <list
                   class="history-record mini-wnd-nav history-wnd dd-bubble"
-                  v-if="item.name === '历史'"
+                  v-if="item.name === '历史' && historyList.records"
                   v-show="isHistoryShow"
                   key="history"
                   :list="historyList"
@@ -150,126 +150,94 @@ export default {
       Bg: {
         backgroundImage: `url(${require('../../../assets/images/header/banner.png')})`
       },
-      leftMenuItems: [{
-        name: '主站',
-        type: 'home',
-        url: '#',
-        icon: true
-      },
-      {
-        name: '画友',
-        type: 'hbili',
-        url: '#',
-        icon: false
-      },
-      {
-        name: '音频',
-        type: 'mbili',
-        url: '#',
-        icon: false
-      },
-      {
-        name: '游戏中心',
-        type: 'game',
-        url: '#',
-        icon: false
-      },
-      {
-        name: '直播',
-        type: 'live',
-        url: '#',
-        icon: false
-      },
-      {
-        name: '会员购',
-        type: 'buy',
-        url: '#',
-        icon: false
-      },
-      {
-        name: 'BML',
-        type: 'nav-bml',
-        url: '#',
-        icon: false
-      },
-      {
-        name: '下载APP',
-        type: 'mobile',
-        url: '#',
-        icon: true
-      }],
-      rightMenuItems: [{
-        name: '账号',
-        name_en: 'account',
-        url: 'https://github.com/Observer-L',
-        picURL: 'https://avatars0.githubusercontent.com/u/28595171?s=460&v=4',
-        profile: true
-      },
-      {
-        name: '大会员',
-        url: '#'
-      },
-      {
-        name: '消息',
-        url: '#',
-        num: 1
-      },
-      {
-        name: '动态',
-        url: '#',
-        num: 6
-      },
-      {
-        name: '稍后再看',
-        url: '#'
-      },
-      {
-        name: '收藏夹',
-        url: '#'
-      },
-      {
-        name: '历史',
-        url: '#'
-      }],
-      watchLaterList: {
-        type: 'watchLater',
-        records: []
-      },
-      collectionsList: {
-        type: 'collections',
-        records: [{
-          list: [{
-            title: '【C菌】法国顶级团队打造神作!【底特律: 变人】实况, 已完结 (多结局补充中 6/8/2018)',
-            link: 'https://www.bilibili.com/video/av23947116'
-          }
-          ]
+      leftMenuItems: [
+        {
+          name: '主站',
+          type: 'home',
+          url: '#',
+          icon: true
         },
         {
-          list: [{
-            title: '【我的三体】罗辑传-第4集（MC动画）',
-            link: 'https://www.bilibili.com/video/av18194931'
-          }]
-        }]},
-      historyList: {
-        type: 'history',
-        records: [{
-          timeline: '昨日',
-          list: [{
-            title: '【C菌】法国顶级团队打造神作!【底特律: 变人】实况, 已完结 (多结局补充中 6/8/2018)',
-            link: 'https://www.bilibili.com/video/av23947116',
-            progress: 100,
-            page: 25
-          }
-          ]
+          name: '画友',
+          type: 'hbili',
+          url: '#',
+          icon: false
         },
         {
-          timeline: '近1周',
-          list: [{
-            title: '【我的三体】罗辑传-第4集（MC动画）',
-            link: 'https://www.bilibili.com/video/av18194931',
-            progress: 80
-          }]
-        }]},
+          name: '音频',
+          type: 'mbili',
+          url: '#',
+          icon: false
+        },
+        {
+          name: '游戏中心',
+          type: 'game',
+          url: '#',
+          icon: false
+        },
+        {
+          name: '直播',
+          type: 'live',
+          url: '#',
+          icon: false
+        },
+        {
+          name: '会员购',
+          type: 'buy',
+          url: '#',
+          icon: false
+        },
+        {
+          name: 'BML',
+          type: 'nav-bml',
+          url: '#',
+          icon: false
+        },
+        {
+          name: '下载APP',
+          type: 'mobile',
+          url: '#',
+          icon: true
+        }
+      ],
+      rightMenuItems: [
+        {
+          name: '账号',
+          name_en: 'account',
+          url: 'https://github.com/Observer-L',
+          picURL: 'https://avatars0.githubusercontent.com/u/28595171?s=460&v=4',
+          profile: true
+        },
+        {
+          name: '大会员',
+          url: '#'
+        },
+        {
+          name: '消息',
+          url: '#',
+          num: 1
+        },
+        {
+          name: '动态',
+          url: '#',
+          num: 6
+        },
+        {
+          name: '稍后再看',
+          url: '#'
+        },
+        {
+          name: '收藏夹',
+          url: '#'
+        },
+        {
+          name: '历史',
+          url: '#'
+        }
+      ],
+      watchLaterList: {},
+      collectionsList: {},
+      historyList: {},
       isLiveShow: false,
       isOrcodeShow: false,
       isProfileShow: false,
@@ -308,10 +276,20 @@ export default {
     },
     bindHover () {
       // console.table(this.leftMenuItems)
+    },
+    getInfo () {
+      this.$axios.get('/api/user/index.json')
+        .then(this.getInfoSucc)
+    },
+    getInfoSucc (res) {
+      const data = res.data
+      this.historyList = data.history
+      this.collectionsList = data.collections
+      this.watchLaterList = data.watchlater
     }
   },
   mounted () {
-    this.bindHover()
+    this.getInfo()
   }
 }
 </script>

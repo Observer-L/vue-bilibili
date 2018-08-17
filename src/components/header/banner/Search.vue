@@ -66,72 +66,8 @@ export default {
   data () {
     return {
       keyword: '',
-      keywordList: {
-        keyword: '中国',
-        results: [
-          {
-            result1: {
-              keyword: '中国',
-              url: 'https://www.baidu.com'
-            }
-          },
-          {
-            result2: {
-              keyword: '中国BOY超级大猩猩',
-              url: 'https://www.baidu.com'
-            }
-          },
-          {
-            result3: {
-              keyword: '中国新说唱',
-              url: 'https://www.baidu.com'
-            }
-          },
-          {
-            result4: {
-              keyword: '中国BOY',
-              url: 'https://www.baidu.com'
-            }
-          },
-          {
-            result5: {
-              keyword: '中国吃播',
-              url: 'https://www.baidu.com'
-            }
-          },
-          {
-            result6: {
-              keyword: '中国好声音',
-              url: 'https://www.baidu.com'
-            }
-          },
-          {
-            result7: {
-              keyword: '舌尖上的中国',
-              url: 'https://www.baidu.com'
-            }
-          },
-          {
-            result8: {
-              keyword: '中国测试中国测试中测试国中国测试中国测试中测试国中国测试中国测试中测试国中国测试中国测试中测试国',
-              url: 'https://www.baidu.com'
-            }
-          }
-        ]},
-      historyList: [
-        {
-          a: {
-            keyword: '如何拯救世界',
-            url: 'https://www.baidu.com'
-          }
-        },
-        {
-          b: {
-            keyword: '如何毁灭世界',
-            url: 'https://www.baidu.com'
-          }
-        }
-      ],
+      keywordList: [],
+      historyList: [],
       isKeywordShow: false,
       isHistoryShow: false,
       isHistoryEmpty: false
@@ -140,7 +76,7 @@ export default {
   methods: {
     haveKeyword (keyword) {
       const target = keyword.replace(/\s+/g, '')
-      if (!target) return
+      if (!target || !this.keywordList.keyword) return
       const list = this.keywordList
       if (list.keyword.includes(target) && list.results.length !== 0) {
         this.isKeywordShow = true
@@ -155,30 +91,30 @@ export default {
       this.isKeywordShow = false
     },
     showHistory () {
-      this.isHistoryShow = true
+      this.historyList.length !== 0 ? this.isHistoryShow = true : this.isHistoryShow = false
     },
     deleteHistory (index) {
       this.historyList.splice(index, 1)
       this.isHistoryEmpty = this.historyList.length === 0
+    },
+    // datamock
+    getKwList () {
+      this.$axios.get('/api/keyword.json')
+        .then(this.getKwListSucc)
+    },
+    getHyList () {
+      this.$axios.get('/api/user/search-history.json')
+        .then(this.getHyListSucc)
+    },
+    getKwListSucc (res) {
+      this.keywordList = res.data
+    },
+    getHyListSucc (res) {
+      this.historyList = res.data
     }
   },
   filters: {
     highlight (result, keyword) {
-      // const offset = keyword.length
-      // let index = result.indexOf(keyword)
-      // const indexPos = []
-      // while (index > -1) {
-      //   indexPos.push(index)
-      //   index = result.indexOf(keyword)
-      // }
-
-      // html = `
-      //   ${html.substring(0, index)}
-      //     <em class="suggest_high_light">
-      //       ${html.substring(index, index + offset)}
-      //     </em>
-      //   ${html.substring(index + offset)}
-      // `
       const target = keyword.replace(/\s+/g, '')
       const reg = new RegExp(target, 'g')
       return result.replace(reg, `<em class="suggest_high_light">${target}</em>`)
@@ -189,19 +125,11 @@ export default {
       this.isHistoryShow = false
       this.keyword === '' ? this.isKeywordShow = false : this.haveKeyword(this.keyword)
     }
+  },
+  mounted () {
+    this.getKwList()
+    this.getHyList()
   }
-  // mounted () {
-  //   const that = this
-  //   document.addEventListener('click', e => {
-  //     console.log(e.target.className)
-  //     if (e.target.className !== 'bilibili-suggest' &&
-  //           e.target.className !== 'search-keyword' &&
-  //             e.target.className !== 'kw') {
-  //       that.hideSuggest()
-  //     } else {
-  //     }
-  //   })
-  // }
 }
 </script>
 <style lang="stylus" scoped>

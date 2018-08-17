@@ -1,0 +1,47 @@
+{
+  "collections": {
+    "type": "collections",
+    "records": [{
+      "results": [{
+          "title": "【C菌】法国顶级团队打造神作!【底特律: 变人】实况, 已完结 (多结局补充中 6/8/2018)",
+          "link": "https://www.bilibili.com/video/av23947116"
+        },
+        {
+          "title": "【我的三体】罗辑传-第4集（MC动画）",
+          "link": "https://www.bilibili.com/video/av18194931"
+        }
+      ]
+    }]
+  },
+  "history": {
+    "type": "history",
+    "records": [{
+        "昨日": [{
+            "title": "【C菌】法国顶级团队打造神作!【底特律: 变人】实况, 已完结 (多结局补充中 6/8/2018)",
+            "link": "https://www.bilibili.com/video/av23947116",
+            "progress": 100,
+            "page": 25
+          },
+          {
+            "title": "测试",
+            "link": "https://www.bilibili.com/video/av23947116",
+            "progress": 10,
+            "page": 5
+          }
+        ]
+      },
+      {
+        "近1周": [{
+          "title": "【我的三体】罗辑传-第4集（MC动画）",
+          "link": "https://www.bilibili.com/video/av18194931",
+          "progress": 80
+        }]
+      }
+    ]
+  },
+  "watchlater": {
+    "type": "watchLater",
+    "records": []
+  }
+
+}

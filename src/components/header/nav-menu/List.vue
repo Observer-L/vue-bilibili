@@ -1,44 +1,54 @@
 <template>
 <div>
   <ul class="list">
-    <div v-if="!isEmpty">
+    <div v-if="isEmpty">
       <li class="no-data">列表中空空如也，赶紧去添加几个吧~</li>
     </div>
-    <div v-else v-for="(record, index) of records" :key="index">
-      <li v-if="record.timeline" class="timeline" >
-        <span class="date">{{record.timeline}}</span>
-      </li>
-      <li v-for="(item, index) of record.list" :key="index">
-        <a
-          v-if="recordsType != 'history'"
-          target="_blank"
-          :href="item.link"
-          :title="item.title"
+    <div
+      v-else
+      v-for="(record, key, index) of list.records"
+      :key="index">
+      <template v-for="(item, key) of record">
+        <li
+          v-if="list.type === 'history'"
+          class="timeline"
+          :key="key"
         >
-          {{item.title}}
-        </a>
+          <span class="date">{{key}}</span>
+        </li>
 
-        <a
-          v-else
-          class="clearfix"
-          target="_blank"
-          :href="item.link"
-          :title="item.title"
-        >
-          <div class="link">{{item.title}}</div>
-          <div>
-            <div class="state">
-              <span class="page" v-if="item.page">第{{item.page}}P</span>
-              <span class="split" v-if="item.page">|</span>
-              <span class="progress">{{item.progress}}%</span>
-              <i class="device pc"></i>
+        <li v-for="(result, index) of item" :key="index">
+          <a
+            v-if="list.type !== 'history'"
+            target="_blank"
+            :href="result.link"
+            :title="result.title"
+          >
+            {{result.title}}
+          </a>
+
+          <a
+            v-else
+            class="clearfix"
+            target="_blank"
+            :href="result.link"
+            :title="result.title"
+          >
+            <div class="link">{{result.title}}</div>
+            <div>
+              <div class="state">
+                <span class="page" v-if="result.page">第{{result.page}}P</span>
+                <span class="split" v-if="result.page">|</span>
+                <span class="progress">{{result.progress}}%</span>
+                <i class="device pc"></i>
+              </div>
             </div>
-          </div>
-        </a>
-      </li>
+          </a>
+        </li>
+      </template>
     </div>
   </ul>
-  <div v-if="isEmpty">
+  <div v-if="!isEmpty">
     <a href="//space.bilibili.com/2867458/#/favlist" target="_blank" class="read-more">
       查看更多
       <i class="b-icon b-icon-arrow-r"></i>
@@ -50,16 +60,11 @@
 export default {
   name: 'List',
   props: {
-    list: {
-      type: Object,
-      required: true
-    }
+    list: Object
   },
-  data () {
-    return {
-      records: this.list.records,
-      recordsType: this.list.type,
-      isEmpty: this.list.records.length
+  computed: {
+    isEmpty () {
+      return this.list.records.length === 0
     }
   }
 }

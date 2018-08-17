@@ -1,0 +1,52 @@
+{
+  "keyword": "中国",
+  "results": [{
+      "a": {
+        "keyword": "中国",
+        "url": "https://www.baidu.com"
+      }
+    },
+    {
+      "b": {
+        "keyword": "中国BOY超级大猩猩",
+        "url": "https://www.baidu.com"
+      }
+    },
+    {
+      "c": {
+        "keyword": "中国新说唱",
+        "url": "https://www.baidu.com"
+      }
+    },
+    {
+      "d": {
+        "keyword": "中国BOY",
+        "url": "https://www.baidu.com"
+      }
+    },
+    {
+      "e": {
+        "keyword": "中国吃播",
+        "url": "https://www.baidu.com"
+      }
+    },
+    {
+      "f": {
+        "keyword": "中国好声音",
+        "url": "https://www.baidu.com"
+      }
+    },
+    {
+      "g": {
+        "keyword": "舌尖上的中国",
+        "url": "https://www.baidu.com"
+      }
+    },
+    {
+      "h": {
+        "keyword": "中国测试中国测试中测试国中国测试中国测试中测试国中国测试中国测试中测试国中国测试中国测试中测试国",
+        "url": "https://www.baidu.com"
+      }
+    }
+  ]
+}

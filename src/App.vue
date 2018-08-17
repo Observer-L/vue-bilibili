@@ -6,6 +6,7 @@
 
 <script>
 import BiliHeader from './components/header/BiliHeader'
+
 export default {
   name: 'App',
   components: {
