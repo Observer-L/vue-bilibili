@@ -96,7 +96,7 @@ export default {
         height 20px
         margin-left 9px
         margin-top 3px
-        background url('../../assets/images/base/icons.png') no-repeat
+        background url(~@/assets/images/base/icons.png) no-repeat
         &.pc
           background-position -1367px -406px
       .split
@@ -147,7 +147,7 @@ export default {
     vertical-align middle
     width 12px
     height 12px
-    background url(../../assets/images/base/icons.png) no-repeat
+    background url(~@/assets/images/base/icons.png) no-repeat
     &.b-icon-arrow-r
       width 6px
       height 12px

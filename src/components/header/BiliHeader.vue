@@ -1,14 +1,18 @@
 <template>
   <div class="bili-header">
     <nav-menu></nav-menu>
+    <banner></banner>
   </div>
 </template>
 <script>
-import NavMenu from './NavMenu.vue'
+import NavMenu from './nav-menu/NavMenu.vue'
+import Banner from './banner/HeadBanner.vue'
+
 export default {
   name: 'Header',
   components: {
-    NavMenu
+    NavMenu,
+    Banner
   }
 }
 </script>

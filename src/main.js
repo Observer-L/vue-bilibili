@@ -4,6 +4,9 @@ import router from './router'
 
 import 'styles/global.styl'
 
+// 全局指令
+import './directives'
+
 // 全局组件注册
 import Btn from 'common/btn'
 import Notification from 'common/notification'

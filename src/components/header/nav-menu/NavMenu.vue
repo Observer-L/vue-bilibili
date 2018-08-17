@@ -76,7 +76,7 @@
                   v-show="isProfileShow"
                 >
                   <div class="header-uname"><a href="https://github.com/Observer-L" target="_blank">Observer-L</a></div>
-                  <img src="../../assets/logo.png">
+                  <img src="~assets/logo.png">
                 </div>
 
                 <vip
@@ -148,7 +148,7 @@ export default {
   data () {
     return {
       Bg: {
-        backgroundImage: `url(${require('../../assets/images/header/banner.png')})`
+        backgroundImage: `url(${require('../../../assets/images/header/banner.png')})`
       },
       leftMenuItems: [{
         name: '主站',
@@ -381,7 +381,7 @@ export default {
             top 42px
             width 259px
             height 174px
-            background url(../../assets/images/base/orcode-frame.png)
+            background url(~assets/images/base/orcode-frame.png)
             &:before
               content ""
               position absolute
@@ -389,7 +389,7 @@ export default {
               height 97px
               left 82px
               top 30px
-              background url(../../assets/images/base/orcode.png)
+              background url('~assets/images/base/orcode.png')
         &.home
           margin-left -10px
           padding-left 12px
