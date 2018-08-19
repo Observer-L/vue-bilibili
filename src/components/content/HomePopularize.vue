@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: 'ChiefRecommend'
+  name: 'HomePopularize'
 }
 </script>
 <style lang="stylus" scoped>
