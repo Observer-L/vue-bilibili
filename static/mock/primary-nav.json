@@ -1,0 +1,487 @@
+{
+  "0": {
+    "name": "首页",
+    "type": "home",
+    "url": "https://www.bilibili.com"
+  },
+  "1": {
+    "name": "动画",
+    "type": "channel",
+    "num": "999+",
+    "url": "https://www.bilibili.com/v/douga/",
+    "subnav": {
+      "0": {
+        "name": "MAD.AMV",
+        "url": "https://www.bilibili.com/v/douga/mad/"
+      },
+      "1": {
+        "name": "MMD·3D",
+        "url": "https://www.bilibili.com/v/douga/mmd/"
+      },
+      "2": {
+        "name": "短片·手书·配音",
+        "url": "https://www.bilibili.com/v/douga/voice/"
+      },
+      "3": {
+        "name": "综合",
+        "url": "https://www.bilibili.com/v/douga/other/"
+      }
+    }
+  },
+  "2": {
+    "name": "番剧",
+    "type": "channel",
+    "num": "90",
+    "url": "https://www.bilibili.com/anime",
+    "subnav": {
+      "0": {
+        "name": "连载动画",
+        "url": "https://www.bilibili.com/v/anime/serial/"
+      },
+      "1": {
+        "name": "完结动画",
+        "url": "https://www.bilibili.com/v/anime/finish/"
+      },
+      "2": {
+        "name": "资讯",
+        "url": "https://www.bilibili.com/v/anime/information/"
+      },
+      "3": {
+        "name": "官方延伸",
+        "url": "https://www.bilibili.com/v/anime/offical/"
+      },
+      "4": {
+        "name": "新番时间表",
+        "url": "https://www.bilibili.com/v/anime/timeline/"
+      },
+      "5": {
+        "name": "番剧索引",
+        "url": "https://www.bilibili.com/v/anime/index/"
+      }
+    }
+  },
+  "3": {
+    "name": "国创",
+    "type": "channel",
+    "num": "201",
+    "url": "https://www.bilibili.com/guochuang",
+    "subnav": {
+      "0": {
+        "name": "国创动画",
+        "url": "https://www.bilibili.com/v/guochuang/chinese/"
+      },
+      "1": {
+        "name": "国产原创相关",
+        "url": "https://www.bilibili.com/v/guochuang/original/"
+      },
+      "2": {
+        "name": "布袋戏",
+        "url": "https://www.bilibili.com/v/guochuang/pupetry/"
+      },
+      "3": {
+        "name": "资讯",
+        "url": "https://www.bilibili.com/v/guochuang/information/"
+      },
+      "4": {
+        "name": "新番时间表",
+        "url": "https://www.bilibili.com/v/guochuang/timeline/"
+      },
+      "5": {
+        "name": "国产动画索引",
+        "url": "https://www.bilibili.com/v/guochuang/index/"
+      }
+    }
+  },
+  "4": {
+    "name": "音乐",
+    "type": "channel",
+    "num": "999+",
+    "url": "https://www.bilibili.com/v/music/",
+    "subnav": {
+      "0": {
+        "name": "原创音乐",
+        "url": "https://www.bilibili.com/v/music/original/"
+      },
+      "1": {
+        "name": "翻唱",
+        "url": "https://www.bilibili.com/v/music/cover/"
+      },
+      "2": {
+        "name": "VOCALOID·UTAU",
+        "url": "https://www.bilibili.com/v/music/vocaloid/"
+      },
+      "3": {
+        "name": "演奏",
+        "url": "https://www.bilibili.com/v/music/perform/"
+      },
+      "4": {
+        "name": "三次元音乐",
+        "url": "https://www.bilibili.com/v/music/coordinate/"
+      },
+      "5": {
+        "name": "OP/ED/OST",
+        "url": "https://www.bilibili.com/v/music/oped/"
+      },
+      "6": {
+        "name": "音乐选集",
+        "url": "https://www.bilibili.com/v/music/collection/"
+      }
+    }
+  },
+  "5": {
+    "name": "舞蹈",
+    "type": "channel",
+    "num": "346",
+    "url": "https://www.bilibili.com/v/dance/",
+    "subnav": {
+      "0": {
+        "name": "宅舞",
+        "url": "https://www.bilibili.com/v/dance/otaku/"
+      },
+      "1": {
+        "name": "三次元舞蹈",
+        "url": "https://www.bilibili.com/v/dance/three_d/"
+      },
+      "2": {
+        "name": "舞蹈教程",
+        "url": "https://www.bilibili.com/v/dance/demo/"
+      }
+    }
+  },
+  "6": {
+    "name": "游戏",
+    "type": "channel",
+    "num": "999+",
+    "url": "https://www.bilibili.com/v/game/",
+    "subnav": {
+      "0": {
+        "name": "单机游戏",
+        "url": "https://www.bilibili.com/v/game/stand_alone/"
+      },
+      "1": {
+        "name": "电子竞技",
+        "url": "https://www.bilibili.com/v/game/esports/"
+      },
+      "2": {
+        "name": "手机游戏",
+        "url": "https://www.bilibili.com/v/game/mobile/"
+      },
+      "3": {
+        "name": "网络游戏",
+        "url": "https://www.bilibili.com/v/game/online/"
+      },
+      "4": {
+        "name": "桌游棋牌",
+        "url": "https://www.bilibili.com/v/game/board/"
+      },
+      "5": {
+        "name": "GMV",
+        "url": "https://www.bilibili.com/v/game/gmv/"
+      },
+      "6": {
+        "name": "音游",
+        "url": "https://www.bilibili.com/v/game/music/"
+      },
+      "7": {
+        "name": "Mugen",
+        "url": "https://www.bilibili.com/v/game/mugen/"
+      },
+      "8": {
+        "name": "游戏赛事",
+        "url": "https://www.bilibili.com/v/game/match/"
+      }
+    }
+  },
+  "7": {
+    "name": "科技",
+    "type": "channel",
+    "num": "999+",
+    "url": "https://www.bilibili.com/v/technology/",
+    "subnav": {
+      "0": {
+        "name": "趣味科普人文",
+        "url": "https://www.bilibili.com/v/technology/fun/"
+      },
+      "1": {
+        "name": "野生技术协会",
+        "url": "https://www.bilibili.com/v/technology/wild/"
+      },
+      "2": {
+        "name": "演讲·公开课",
+        "url": "https://www.bilibili.com/v/technology/speech_course/"
+      },
+      "4": {
+        "name": "星海",
+        "url": "https://www.bilibili.com/v/technology/military/"
+      },
+      "5": {
+        "name": "数码",
+        "url": "https://www.bilibili.com/v/technology/digital/"
+      },
+      "6": {
+        "name": "机械",
+        "url": "https://www.bilibili.com/v/technology/mechanical/"
+      },
+      "7": {
+        "name": "汽车",
+        "url": "https://www.bilibili.com/v/technology/automobile/"
+      }
+    }
+  },
+  "8": {
+    "name": "生活",
+    "type": "channel",
+    "num": "999+",
+    "url": "https://www.bilibili.com/v/life/",
+    "subnav": {
+      "0": {
+        "name": "搞笑",
+        "url": "https://www.bilibili.com/v/life/funny/"
+      },
+      "1": {
+        "name": "日常",
+        "url": "https://www.bilibili.com/v/life/daily/"
+      },
+      "2": {
+        "name": "美食圈",
+        "url": "https://www.bilibili.com/v/life/food/"
+      },
+      "3": {
+        "name": "动物圈",
+        "url": "https://www.bilibili.com/v/life/animal/"
+      },
+      "4": {
+        "name": "手工",
+        "url": "https://www.bilibili.com/v/life/handmake/"
+      },
+      "5": {
+        "name": "绘画",
+        "url": "https://www.bilibili.com/v/life/painting/"
+      },
+      "6": {
+        "name": "运动",
+        "url": "https://www.bilibili.com/v/life/sports/"
+      },
+      "7": {
+        "name": "其他",
+        "url": "https://www.bilibili.com/v/life/other/"
+      }
+    }
+  },
+  "9": {
+    "name": "鬼畜",
+    "type": "channel",
+    "num": "229",
+    "url": "https://www.bilibili.com/v/kichiku/",
+    "subnav": {
+      "0": {
+        "name": "鬼畜调教",
+        "url": "https://www.bilibili.com/v/kichiku/guide/"
+      },
+      "1": {
+        "name": "音MAD",
+        "url": "https://www.bilibili.com/v/kichiku/mad/"
+      },
+      "2": {
+        "name": "人力VOCALOID",
+        "url": "https://www.bilibili.com/v/kichiku/manual_vocaloid/"
+      },
+      "3": {
+        "name": "教程演示",
+        "url": "https://www.bilibili.com/v/kichiku/course/"
+      }
+    }
+  },
+  "10": {
+    "name": "时尚",
+    "type": "channel",
+    "num": "722",
+    "url": "https://www.bilibili.com/v/fashion/",
+    "subnav": {
+      "0": {
+        "name": "美妆",
+        "url": "https://www.bilibili.com/v/fashion/makeup/"
+      },
+      "1": {
+        "name": "服饰",
+        "url": "https://www.bilibili.com/v/fashion/clothing/"
+      },
+      "2": {
+        "name": "健身",
+        "url": "https://www.bilibili.com/v/fashion/aerobics/"
+      },
+      "3": {
+        "name": "资讯",
+        "url": "https://www.bilibili.com/v/fashion/information/"
+      }
+    }
+  },
+  "11": {
+    "name": "广告",
+    "type": "channel",
+    "num": "999+",
+    "url": "https://www.bilibili.com/v/ent/"
+  },
+  "12": {
+    "name": "娱乐",
+    "type": "channel",
+    "num": "999+",
+    "url": "https://www.bilibili.com/v/ent/",
+    "subnav": {
+      "0": {
+        "name": "综艺",
+        "url": "https://www.bilibili.com/v/ent/variety/"
+      },
+      "1": {
+        "name": "明星",
+        "url": "https://www.bilibili.com/v/ent/star/"
+      },
+      "2": {
+        "name": "Korea相关",
+        "url": "https://www.bilibili.com/v/ent/korea/"
+      }
+    }
+  },
+  "13": {
+    "name": "影视",
+    "type": "channel",
+    "num": "999+",
+    "url": "https://www.bilibili.com/v/cinephile/",
+    "subnav": {
+      "0": {
+        "name": "影视杂谈",
+        "url": "https://www.bilibili.com/v/cinephile/cinecism/"
+      },
+      "1": {
+        "name": "影视剪辑",
+        "url": "https://www.bilibili.com/v/cinephile/montage/"
+      },
+      "2": {
+        "name": "短片",
+        "url": "https://www.bilibili.com/v/cinephile/shortfilm/"
+      },
+      "3": {
+        "name": "预告·资讯",
+        "url": "https://www.bilibili.com/v/cinephile/trailer_info/"
+      },
+      "4": {
+        "name": "特摄",
+        "url": "https://www.bilibili.com/v/cinephile/tokusatsu/"
+      }
+    }
+  },
+  "14": {
+    "name": "放映厅",
+    "type": "channel",
+    "num": "267",
+    "url": "https://www.bilibili.com/v/cinema/",
+    "subnav": {
+      "0": {
+        "name": "纪录片",
+        "url": "https://www.bilibili.com/v/cinema/documentary/"
+      },
+      "1": {
+        "name": "电影",
+        "url": "https://www.bilibili.com/v/cinema/movie/"
+      },
+      "2": {
+        "name": "电视剧",
+        "url": "https://www.bilibili.com/v/cinema/tv/"
+      }
+    }
+  },
+  "15": {
+    "name": "专栏",
+    "type": "side-nav",
+    "icon": "zhuanlan",
+    "url": "//www.bilibili.com/read/home"
+  },
+  "16": {
+    "name": "广场",
+    "type": "side-nav",
+    "icon": "square",
+    "url": "//www.bilibili.com/square",
+    "subnav": {
+      "0": {
+        "name": "会员购物",
+        "url": "//show.bilibili.com/platform/home.html",
+        "icon": "icon-vip-buy"
+      },
+      "1": {
+        "name": "活动中心",
+        "url": "//activity.bilibili.com",
+        "icon": "icon-activity"
+      },
+      "2": {
+        "name": "游戏中心",
+        "url": "//game.bilibili.com",
+        "icon": "icon-game"
+      },
+      "3": {
+        "name": "新闻中心",
+        "url": "//news.bilibili.com",
+        "icon": "icon-news"
+      },
+      "4": {
+        "name": "画友",
+        "url": "http://h.bilibili.com",
+        "icon": "icon-hy"
+      },
+      "5": {
+        "name": "芒果TV",
+        "url": "https://www.bilibili.com/mango",
+        "icon": "icon-mango"
+      }
+    }
+  },
+  "17": {
+    "name": "直播",
+    "type": "side-nav",
+    "icon": "live",
+    "url": "//live.bilibili.com",
+    "subnav": {
+      "0": {
+        "name": "推荐主播",
+        "url": "//live.bilibili.com/subject"
+      },
+      "1": {
+        "name": "生活娱乐",
+        "url": "//live.bilibili.com/ent"
+      },
+      "2": {
+        "name": "绘画专区",
+        "url": "//live.bilibili.com/draw"
+      },
+      "3": {
+        "name": "唱见舞见",
+        "url": "//live.bilibili.com/pages/area/ent"
+      },
+      "4": {
+        "name": "御宅文化",
+        "url": "//live.bilibili.com/pages/area/ent"
+      },
+      "5": {
+        "name": "单机联机",
+        "url": "//live.bilibili.com/single"
+      },
+      "6": {
+        "name": "网络游戏",
+        "url": "//live.bilibili.com/online"
+      },
+      "7": {
+        "name": "电子竞技",
+        "url": "//live.bilibili.com/e-sports"
+      },
+      "8": {
+        "name": "手游直播",
+        "url": "//live.bilibili.com/mobile-game"
+      }
+    }
+  },
+  "18": {
+    "name": "小黑屋",
+    "type": "side-nav",
+    "icon": "blackroom",
+    "url": "//www.bilibili.com/blackroom/"
+  }
+}

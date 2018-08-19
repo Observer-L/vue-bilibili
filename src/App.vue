@@ -20,4 +20,5 @@ export default {
   font 12px Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
+  height 1500px
 </style>
