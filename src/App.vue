@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <bili-header></bili-header>
+    <bili-content></bili-content>
   </div>
 </template>
 
 <script>
 import BiliHeader from './components/header/BiliHeader'
-
+import BiliContent from './components/content/BiliContent'
 export default {
   name: 'App',
   components: {
-    BiliHeader
+    BiliHeader,
+    BiliContent
   }
 }
 </script>
