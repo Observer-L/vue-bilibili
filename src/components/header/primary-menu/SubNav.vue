@@ -15,9 +15,6 @@ export default {
   name: 'SubNav',
   props: {
     subnavData: Object
-  },
-  mounted () {
-    console.log(this.subnavData)
   }
 }
 </script>
