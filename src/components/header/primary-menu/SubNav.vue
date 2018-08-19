@@ -56,10 +56,9 @@ li
         top -3px
         transition all .2s
         opacity 0
-&:not(.square-wrap) li:hover>a span:after
-    right -21px
-    opacity 1
-
+.sub-nav:not(.nav-square) li:hover>a span:after
+  right -21px
+  opacity 1
 .nav-square
   ul
     width 107px

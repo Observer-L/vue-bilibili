@@ -359,7 +359,7 @@ export default {
             top 42px
             width 259px
             height 174px
-            background url(~assets/images/base/orcode-frame.png)
+            background url('~assets/images/base/orcode-frame.png')
             &:before
               content ""
               position absolute
