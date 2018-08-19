@@ -1,15 +1,17 @@
 <template>
   <div class="chief-recommend-module clearfix">
-    recommend
     <carousel></carousel>
+    <recommend></recommend>
   </div>
 </template>
 <script>
 import Carousel from './Carousel'
+import Recommend from './Recommend'
 export default {
   name: 'ChiefRecommend',
   components: {
-    Carousel
+    Carousel,
+    Recommend
   }
 }
 </script>
