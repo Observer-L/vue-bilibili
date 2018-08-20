@@ -1,31 +1,25 @@
 <template>
   <div class="popularize-module clearfix">
-    <left-content :list="promotelist" cat="promote" type="spread"></left-content>
-    <right-content :list="promoteAd" :online="online"></right-content>
+    <left-content cat="live" type="live" :list="recommend"></left-content>
   </div>
 </template>
 <script>
 import LeftContent from '../left-content/Lcon'
-import RightContent from './Rcon'
 import { mapGetters } from 'vuex'
 export default {
-  name: 'HomePopularize',
+  name: 'Live',
   components: {
-    LeftContent,
-    RightContent
+    LeftContent
   },
   computed: {
     ...mapGetters([
       'requesting',
       'error',
-      'promotelist',
-      'promoteAd',
-      'online'
+      'recommend'
     ])
   },
   mounted () {
-    this.$store.dispatch('promote')
-    this.$store.dispatch('online')
+    this.$store.dispatch('live')
   }
 }
 </script>

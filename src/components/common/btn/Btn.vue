@@ -8,8 +8,8 @@
     </div>
     <a
       v-else
-      href="#"
       target="_blank"
+      :href="link"
       :class="btnClass"
     >
       <i class="icon" v-if="floatPos === 'fl'"></i>
@@ -30,7 +30,8 @@ export default {
     position: {
       type: String,
       default: 'right'
-    }
+    },
+    link: String
   },
   data () {
     return {

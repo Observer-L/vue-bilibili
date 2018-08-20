@@ -8,9 +8,10 @@ const router = Router()
 
 // 直播
 router.get('/live', async (ctx, next) => {
-  console.log('789asdkjashdkjhaskjdh')
-  let response = await axios.get(liveXhr)
-  ctx.body = response.data
+  const response = await axios.get(liveXhr)
+  const data = response.data
+  const result = data.substring(12, data.length - 1)
+  ctx.body = JSON.parse(result)
 })
 
 export default router

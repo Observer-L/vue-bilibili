@@ -1,53 +1,14 @@
+<!--
+card-live-module
+-->
 <template>
-  <div class="storey-box clearfix">
-    <div
-      class="spread-module"
-      v-for="(item, index) of list"
-      :key="index"
-      @mouseover="showPreview(index)"
-      @mouseout="hidePreview"
-    >
-      <a :href="'//www.bilibili.com/video/av' + item.archive.aid" target="_blank">
-        <div class="pic">
-          <div class="lazy-img">
-            <img :alt="item.name" :src="item.pic">
-          </div>
-
-          <div
-            :class="['cover-preview-module', {'show': current === index}]"
-          >
-            <div
-              class="cover"
-              :style="{
-                backgroundImage: `url(https://i3.hdslb.com/bfs/videoshot/${item.archive.cid}.jpg@.webp?vsign=6efbf9b54404085c3d8ed2f2f7d1fd75842de3ed&ver=101640070)`,
-                backgroundPosition: '0px 0px',
-                backgroundZize: '1600px'
-                }"
-              >
-              <!-- todo动画 -->
-            </div>
-            <div class="progress-bar">
-              <!-- todo动画 -->
-              <span style="width: 50%"></span>
-            </div>
-          </div>
-
-          <div class="mask-video"></div>
-          <div :class="['danmu-module', {'show': current === index}]">
-            <p class="dm">测试预览弹幕</p>
-            <p class="dm row2">测试预览弹幕row2</p>
-          </div>
-          <span class="dur" v-html="convertDur(item.archive.duration)"></span>
-          <div class="watch-later-trigger w-later"></div>
-        </div>
-        <p class="t" :title="item.name">{{item.name}}</p>
-      </a>
-    </div>
+  <div class="card-live-module" @mouseout="hidePreview">
+    {{list}}
   </div>
 </template>
 <script>
 export default {
-  name: 'StoreyBox',
+  name: 'LiveCard',
   props: {
     list: Array
   },
@@ -62,32 +23,12 @@ export default {
     },
     hidePreview () {
       this.current = null
-    },
-    convertDur (dur) {
-      if (dur >= 3600) {
-        let hour = Math.floor(dur / 3600)
-        let min = Math.floor(dur % 3600 / 60)
-        let sec = Math.floor(dur % 3600 % 60)
-        min = String(min).length === 1 ? '0' + min : min
-        sec = String(sec).length === 1 ? '0' + (sec) : sec
-        return `${hour}:${min}:${sec}`
-      } else if (dur <= 59) {
-        return `00:${dur}`
-      } else {
-        let min = Math.floor(dur / 60)
-        let sec = dur % 60
-        min = String(min).length === 1 ? '0' + min : min
-        sec = String(sec).length === 1 ? '0' + (sec) : sec
-        return `${min}:${sec}`
-      }
     }
   }
 }
 </script>
 <style lang="stylus" scoped>
 .storey-box
-  height 168px
-  overflow hidden
   .spread-module
     position relative
     float left

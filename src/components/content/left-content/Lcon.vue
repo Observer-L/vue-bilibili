@@ -1,20 +1,31 @@
 <template>
   <div class="l-con">
-    <head-line></head-line>
-    <storey-box :list="list"></storey-box>
+    <head-line :cat="cat" v-if="cat === 'promote'"></head-line>
+    <zone-title :cat="cat" v-else></zone-title>
+    <storey-box :list="list" :type="type"></storey-box>
   </div>
 </template>
 <script>
-import HeadLine from '../left-content/HeadLine'
-import StoreyBox from './StoreyBox'
+import ZoneTitle from './ZoneTitle'
+import HeadLine from './HeadLine'
+import StoreyBox from './card/StoreyBox'
 export default {
   name: 'leftContent',
-  props: {
-    list: Array
-  },
   components: {
+    ZoneTitle,
     HeadLine,
     StoreyBox
+  },
+  props: {
+    list: Array,
+    cat: {
+      type: String,
+      required: true
+    },
+    type: {
+      type: String,
+      required: true
+    }
   }
 }
 </script>

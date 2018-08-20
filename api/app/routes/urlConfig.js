@@ -13,8 +13,6 @@ export const promote = 'http://api.bilibili.com/x/web-show/res/loc?pf=0&id=34'
 // 推广右侧广告
 export const promoteAd = 'http://api.bilibili.com/x/web-show/res/loc?pf=0&id=29'
 
-// 直播
-export const liveXhr = 'http://live.bilibili.com/bili/recom?callback=liveXhrDone'
 // 番剧下方更新列表右侧新番放送表上侧
 export const slideshow = 'http://www.bilibili.com/index/slideshow/41.json'
 // 番剧下方更新列表右侧新番放送表下侧
@@ -48,3 +46,7 @@ export const recommend = 'http://www.bilibili.com/index/recommend.json'
 
 // 在线人数/最新投稿
 export const online = 'https://api.bilibili.com/x/web-interface/online'
+
+// 直播
+// export const liveXhr = 'http://live.bilibili.com/bili/recom?callback=liveXhrDone'
+export const liveXhr = 'https://api.live.bilibili.com/room/v1/RoomRecommend/biliIndexRecList?callback=liveXhrDone'
