@@ -4,6 +4,8 @@ import Vuex from 'vuex'
 import bannerStore from './modules/bannerStore'
 import rankStore from './modules/rankStore'
 import promoteStore from './modules/promoteStore'
+import liveStore from './modules/liveStore'
+import onlineStore from './modules/onlineStore'
 
 Vue.use(Vuex)
 
@@ -23,6 +25,8 @@ export default new Vuex.Store({
   modules: {
     bannerStore,
     rankStore,
-    promoteStore
+    promoteStore,
+    liveStore,
+    onlineStore
   }
 })

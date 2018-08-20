@@ -1,7 +1,7 @@
 <template>
   <div class="popularize-module clearfix">
     <left-content :list="promotelist"></left-content>
-    <right-content :list="promoteAd"></right-content>
+    <right-content :list="promoteAd" :online="online"></right-content>
   </div>
 </template>
 <script>
@@ -18,13 +18,14 @@ export default {
     ...mapGetters([
       'requesting',
       'error',
-      'promote',
       'promotelist',
-      'promoteAd'
+      'promoteAd',
+      'online'
     ])
   },
   mounted () {
     this.$store.dispatch('promote')
+    this.$store.dispatch('online')
   }
 }
 </script>

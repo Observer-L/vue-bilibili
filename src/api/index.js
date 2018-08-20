@@ -27,3 +27,21 @@ export const promoteApi = {
     })
   }
 }
+
+// 直播
+export const liveApi = {
+  live () {
+    return axios.get(url.live).then((response) => {
+      return response.data
+    })
+  }
+}
+
+// 在线人数/投稿书
+export const onlineApi = {
+  online () {
+    return axios.get(url.online).then((response) => {
+      return response.data
+    })
+  }
+}

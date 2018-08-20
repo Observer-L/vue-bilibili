@@ -1,9 +1,13 @@
 <template>
   <div class="r-con">
     <div class="online">
-      <a href="//www.bilibili.com/video/online.html" target="_blank" title="在线观看：3073929">在线人数：2389385</a>
+      <a href="//www.bilibili.com/video/online.html" target="_blank" title="在线观看：3073929">
+        在线人数：{{online.web_online}}
+      </a>
       <em></em>
-      <a href="//www.bilibili.com/newlist.html" target="_blank">最新投稿：18905</a>
+      <a href="//www.bilibili.com/newlist.html" target="_blank">
+        最新投稿：{{online.all_count}}
+      </a>
     </div>
     <div class="adpos" v-if="list.length">
       <a :href="list[0].url" target="_blank">
@@ -16,7 +20,8 @@
 export default {
   name: 'RightContent',
   props: {
-    list: Array
+    list: Array,
+    online: Object
   }
 }
 </script>

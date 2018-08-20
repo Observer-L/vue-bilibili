@@ -19,6 +19,7 @@ export const liveXhr = 'http://live.bilibili.com/bili/recom?callback=liveXhrDone
 export const slideshow = 'http://www.bilibili.com/index/slideshow/41.json'
 // 番剧下方更新列表右侧新番放送表下侧
 export const season = 'http://www.bilibili.com/api_proxy?app=bangumi&action=get_season_by_tag&page=1&tag_id=101&pagesize=4'
+
 // 轮播图右边总排行
 // 3日排行
 export const ranking3 = 'http://www.bilibili.com/index/ranking-3day.json'
@@ -44,3 +45,6 @@ export const recommend = 'http://www.bilibili.com/index/recommend.json'
 // TV剧集排行 11-3day.json
 // 各分类下7日排行
 // 动画排行 1-week.json
+
+// 在线人数/最新投稿
+export const online = 'https://api.bilibili.com/x/web-interface/online'
