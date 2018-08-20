@@ -12,7 +12,7 @@
 </template>
 <script>
 import ChiefRecommend from './chief-recommend/ChiefRecommend'
-import HomePopularize from './HomePopularize'
+import HomePopularize from './popularize/HomePopularize'
 import Floor from './Floor'
 import SpecialRecommend from './SpecialRecommend'
 export default {

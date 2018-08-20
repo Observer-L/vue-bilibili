@@ -10,6 +10,8 @@ const router = Router()
 // 推广
 router.get('/promote', async (ctx, next) => {
   let response = await axios.get(promote)
+  let ad = await axios.get(promoteAd)
+  response.data.promoteAd = ad.data.data
   ctx.body = response.data
 })
 router.get('/promoteAd', async (ctx, next) => {
