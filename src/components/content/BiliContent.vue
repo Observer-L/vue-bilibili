@@ -5,9 +5,9 @@
     <!-- 推广 -->
     <home-popularize></home-popularize>
     <!-- 直播 -->
-    <live id="bili_live" class="zone-wrap-module clearfix"></live>
+    <live></live>
     <!-- 主楼层 -->
-    <floor class="zone-wrap-module clearfix"></floor>
+    <floor></floor>
     <!-- 底部推荐区 -->
     <special-recommend></special-recommend>
   </div>
@@ -32,4 +32,6 @@ export default {
 <style lang="stylus" scoped>
 .zone-wrap-module
   padding-bottom 30px
+.popularize-module
+  padding-bottom 15px
 </style>

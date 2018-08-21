@@ -29,7 +29,3 @@ export default {
   }
 }
 </script>
-<style lang="stylus" scoped>
-.popularize-module
-  padding-bottom 15px
-</style>

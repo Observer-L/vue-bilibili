@@ -1,21 +1,27 @@
 <template>
+<div id="bili_live" class="zone-wrap-module clearfix">
   <div class="live-module clearfix">
     <left-content cat="live" type="live" :list="recommend"></left-content>
+    <right-content :ranking="ranking"></right-content>
   </div>
+</div>
 </template>
 <script>
 import LeftContent from '../left-content/Lcon'
+import RightContent from './Rcon'
 import { mapGetters } from 'vuex'
 export default {
   name: 'Live',
   components: {
-    LeftContent
+    LeftContent,
+    RightContent
   },
   computed: {
     ...mapGetters([
       'requesting',
       'error',
-      'recommend'
+      'recommend',
+      'ranking'
     ])
   },
   mounted () {
@@ -23,7 +29,3 @@ export default {
   }
 }
 </script>
-<style lang="stylus" scoped>
-.popularize-module
-  padding-bottom 15px
-</style>

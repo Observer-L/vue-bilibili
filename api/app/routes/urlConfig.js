@@ -50,3 +50,5 @@ export const online = 'https://api.bilibili.com/x/web-interface/online'
 // 直播
 // export const liveXhr = 'http://live.bilibili.com/bili/recom?callback=liveXhrDone'
 export const liveXhr = 'https://api.live.bilibili.com/room/v1/RoomRecommend/biliIndexRecList?callback=liveXhrDone'
+// 关注的主播 带上&_=your id
+// export const liveAnchor = 'https://api.live.bilibili.com/ajax/feed/list?&pagesize=6&page=1&callback=jqueryCallback_bili_17&_=your id'
