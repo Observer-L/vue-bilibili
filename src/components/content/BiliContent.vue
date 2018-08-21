@@ -7,7 +7,9 @@
     <!-- 直播 -->
     <live></live>
     <!-- 主楼层 -->
-    <floor></floor>
+    <template v-for="(row, index) of rows">
+      <floor :row="row" :key="index" :id="'bili_' + row.category"></floor>
+    </template>
     <!-- 底部推荐区 -->
     <special-recommend></special-recommend>
   </div>
@@ -16,8 +18,10 @@
 import ChiefRecommend from './chief-recommend/ChiefRecommend'
 import HomePopularize from './popularize/HomePopularize'
 import Live from './live/Live'
-import Floor from './Floor'
+import Floor from './floor/Floor'
 import SpecialRecommend from './SpecialRecommend'
+
+import { mapGetters } from 'vuex'
 export default {
   name: 'BiliContent',
   components: {
@@ -26,6 +30,16 @@ export default {
     Live,
     Floor,
     SpecialRecommend
+  },
+  computed: {
+    ...mapGetters([
+      'requesting',
+      'error',
+      'rows'
+    ])
+  },
+  mounted () {
+    this.$store.dispatch('getContentRows')
   }
 }
 </script>

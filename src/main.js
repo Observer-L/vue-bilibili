@@ -12,9 +12,11 @@ import './directives'
 // 全局组件注册
 import Btn from 'common/btn'
 import Notification from 'common/notification'
+import Tabs from 'common/tabs'
 
 Vue.use(Btn)
 Vue.use(Notification)
+Vue.use(Tabs)
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios

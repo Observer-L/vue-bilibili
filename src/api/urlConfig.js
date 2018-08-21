@@ -9,3 +9,11 @@ export const live = serverRoot + '/live'
 
 // 在线人数/投稿数
 export const online = serverRoot + '/online'
+
+// 具体内容
+export const contet = serverRoot + '/ding'
+
+// 三日排行
+export const contentrank = serverRoot + '/contentrank'
+// 一周排行
+export const contentrankweek = serverRoot + '/contentrankweek'

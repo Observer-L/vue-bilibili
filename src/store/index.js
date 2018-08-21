@@ -6,6 +6,7 @@ import rankStore from './modules/rankStore'
 import promoteStore from './modules/promoteStore'
 import liveStore from './modules/liveStore'
 import onlineStore from './modules/onlineStore'
+import contentStore from './modules/contentStore'
 
 Vue.use(Vuex)
 
@@ -27,6 +28,7 @@ export default new Vuex.Store({
     rankStore,
     promoteStore,
     liveStore,
-    onlineStore
+    onlineStore,
+    contentStore
   }
 })

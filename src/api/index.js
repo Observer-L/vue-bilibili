@@ -45,3 +45,27 @@ export const onlineApi = {
     })
   }
 }
+
+// 具体内容
+export const contentApi = {
+  content () {
+    return axios.get(url.contet).then((response) => {
+      console.log(response.data)
+      return response.data
+    })
+  }
+}
+
+// 具体内容的三日排行榜信息
+export const contentrankApi = {
+  contentrank (param) {
+    return axios.post(url.contentrank, param).then((response) => {
+      return response.data
+    })
+  },
+  contentrankweek (param) {
+    return axios.post(url.contentrankweek, param).then((response) => {
+      return response.data
+    })
+  }
+}

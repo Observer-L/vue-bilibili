@@ -52,7 +52,6 @@ export default {
   },
   computed: {
     width () {
-      console.log(this.list.length)
       return this.list.length * 100 + '%'
     }
   },
