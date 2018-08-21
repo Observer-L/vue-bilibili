@@ -61,12 +61,12 @@ export default {
   methods: {
     startInterval () {
       this.interval = setInterval(() => {
-        this.current === 5 ? this.current = 0 : this.current++
+        this.current === 4 ? this.current = 0 : this.current++
         let distance = -100 * this.current
         if (this.$refs.pic) {
           this.$refs.pic.style.marginLeft = distance + '%'
         }
-      }, 5000)
+      }, 1000)
     },
     removeInterval () {
       clearInterval(this.interval)
