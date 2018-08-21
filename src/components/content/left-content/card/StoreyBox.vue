@@ -31,4 +31,8 @@ export default {
 .storey-box
   height 168px
   overflow hidden
+.live-module
+  .storey-box
+    height 336px
+    overflow hidden
 </style>

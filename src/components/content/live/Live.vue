@@ -1,5 +1,5 @@
 <template>
-  <div class="popularize-module clearfix">
+  <div class="live-module clearfix">
     <left-content cat="live" type="live" :list="recommend"></left-content>
   </div>
 </template>

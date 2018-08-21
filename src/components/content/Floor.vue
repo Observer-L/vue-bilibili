@@ -1,5 +1,5 @@
 <template>
-  <div class="zone-wrap-module clearfix">
+  <div>
     floor
   </div>
 </template>
