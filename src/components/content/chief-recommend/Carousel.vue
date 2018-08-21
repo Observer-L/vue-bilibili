@@ -66,7 +66,7 @@ export default {
         if (this.$refs.pic) {
           this.$refs.pic.style.marginLeft = distance + '%'
         }
-      }, 1000)
+      }, 5000)
     },
     removeInterval () {
       clearInterval(this.interval)

@@ -45,17 +45,30 @@
           </div>
         </div>
         <div class="tab-item tuijian">
-          <!-- todo封装通用轮播组件 -->
+          <base-carousel :list="preview"></base-carousel>
+          <div class="anchor clearfix">
+            <a target="_blank" href="//h.bilibili.com" class="pic fl">
+              <img src="~assets/images/content/photography.png" alt="有文画">
+            </a>
+            <a target="_blank" href="//vc.bilibili.com" class="pic fr">
+              <img src="~assets/images/content/shortvideo.png" alt="小视频">
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import BaseCarousel from 'common/carousel/BaseCarousel'
 export default {
   name: 'LiveRcon',
+  components: {
+    BaseCarousel
+  },
   props: {
-    ranking: Array
+    ranking: Array,
+    preview: Array
   },
   data () {
     return {
@@ -122,6 +135,30 @@ export default {
     .tuijian
       border-radius 4px
       overflow hidden
+      .anchor .pic
+        margin-top 20px
+        display inline-block
+      & >>> .slider-box
+        height 248px
+        .slider
+          .title
+            height 51px
+            line-height 30px
+            font-size 12px
+            a
+              white-space nowrap
+              overflow hidden
+              text-overflow ellipsis
+          .panel
+            .trig
+              bottom 0
+              right 0
+              width 100%
+              text-align center
+              padding 5px 0
+              background rgba(0,0,0,.4)
+              span
+                height 6px
     .tab-item
       width 260px
       float left
@@ -226,4 +263,9 @@ export default {
   .empty
     &:before
       background-position center -598px
+
+// .tuijian >>> .slider .title
+//   height 51px !important
+//   line-height 30px !important
+//   font-size 12px !important
 </style>

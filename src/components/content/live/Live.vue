@@ -2,7 +2,7 @@
 <div id="bili_live" class="zone-wrap-module clearfix">
   <div class="live-module clearfix">
     <left-content cat="live" type="live" :list="recommend"></left-content>
-    <right-content :ranking="ranking"></right-content>
+    <right-content :ranking="ranking" :preview="preview"></right-content>
   </div>
 </div>
 </template>
@@ -21,7 +21,8 @@ export default {
       'requesting',
       'error',
       'recommend',
-      'ranking'
+      'ranking',
+      'preview'
     ])
   },
   mounted () {
