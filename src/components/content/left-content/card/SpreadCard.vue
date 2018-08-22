@@ -7,33 +7,22 @@ spread-module
 <div>
   <div
     class="spread-module"
-    v-for="(item, index) of list"
     @mouseover="showPreview(index)"
     @mouseout="hidePreview"
-    :key="index"
   >
     <a
-      :href="'//www.bilibili.com/video/av' + item.archive.aid"
+      :href="'//www.bilibili.com/video/av' + item.aid || item.archive.aid"
       target="_blank"
     >
       <div class="pic">
         <div class="lazy-img">
           <img :alt="item.name" :src="item.pic">
         </div>
-
+        <i v-if="item.stat" :class="['icon medal', corner]"></i>
         <div
           :class="['cover-preview-module', {'show': current === index}]"
         >
-          <div
-            class="cover"
-            :style="{
-              backgroundImage: `url(https://i3.hdslb.com/bfs/videoshot/${item.archive.cid}.jpg@.webp?vsign=6efbf9b54404085c3d8ed2f2f7d1fd75842de3ed&ver=101640070)`,
-              backgroundPosition: '0px 0px',
-              backgroundZize: '1600px'
-              }"
-            >
-            <!-- todo动画 -->
-          </div>
+          <preview v-if="item.archive || item" :cid="item.aid || item.archive.aid"></preview>
           <div class="progress-bar">
             <!-- todo动画 -->
             <span style="width: 50%"></span>
@@ -45,19 +34,29 @@ spread-module
           <p class="dm">测试预览弹幕</p>
           <p class="dm row2">测试预览弹幕row2</p>
         </div>
-        <span class="dur" v-html="convertDur(item.archive.duration)"></span>
+        <span class="dur" v-if="item || item.archive" v-html="convertDur(item.duration || item.archive.duration)"></span>
         <div class="watch-later-trigger w-later"></div>
       </div>
-      <p class="t" :title="item.name">{{item.name}}</p>
+      <p class="t" :title="item.title">{{item.title}}</p>
+      <p class="num" v-if="item.stat">
+        <span class="play"><i class="icon"></i>{{item.stat.view}}</span>
+        <span class="danmu"><i class="icon"></i>{{item.stat.danmaku}}</span>
+      </p>
     </a>
   </div>
 </div>
 </template>
 <script>
+import Preview from './Preview'
 export default {
   name: 'SpreadCard',
+  components: {
+    Preview
+  },
   props: {
-    list: Array
+    // list: Array
+    item: Object,
+    index: Number
   },
   data () {
     return {
@@ -89,6 +88,12 @@ export default {
         return `${min}:${sec}`
       }
     }
+  },
+  computed: {
+    corner () {
+      const count = this.item.stat.coin || 0
+      return count < 2e3 ? '' : count >= 2e3 && count < 1e4 ? 'silvery' : count >= 1e4 ? 'golden' : void 0
+    }
   }
 }
 </script>
@@ -112,6 +117,34 @@ export default {
       word-break break-all
       overflow hidden
       text-align left
+    .num
+      position absolute
+      width 100%
+      bottom 0
+      height 20px
+      line-height 20px
+      color #99a2aa
+      background-color #fff
+      transition all .3s
+      font-size 0
+      span
+        line-height 12px
+        height 14px
+        display inline-block
+        width 50%
+        overflow hidden
+        font-size 12px
+        vertical-align bottom
+      i
+        display inline-block
+        width 12px
+        height 12px
+        vertical-align top
+        margin-right 5px
+      .play .icon
+        background-position -282px -90px
+      .danmu .icon
+        background-position -282px -218px
     .pic
       position relative
       width 160px
@@ -142,6 +175,17 @@ export default {
         line-height 12px
         padding 0 5px 1px 0
         transition all .3s
+      .medal
+        position absolute
+        left 0
+        top 0
+        width 40px
+        height 24px
+        pointer-events none
+        &.silvery
+          background-position -849px -212px
+        &.golden
+          background-position -849px -148px
     &:hover
       .mask-video
         opacity 1
@@ -151,6 +195,8 @@ export default {
         display block
       .t
         color #00a1d6
+      .num
+        bottom -20px
       // todo动画
       .dm
         left 0%

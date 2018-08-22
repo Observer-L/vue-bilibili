@@ -5,8 +5,14 @@
 -->
 <template>
   <div class="storey-box clearfix">
-    <spread-card :list="list" v-if="type === 'spread'"></spread-card>
-    <live-card :list="list" v-if="type === 'live'"></live-card>
+    <spread-card
+      v-if="type === 'spread' && list.length"
+      v-for="(item, index) of list"
+      :key="index"
+      :item="item"
+      :index="index"
+    ></spread-card>
+    <live-card :list="list" v-else></live-card>
   </div>
 </template>
 <script>
@@ -31,7 +37,7 @@ export default {
 .storey-box
   height 168px
   overflow hidden
-.live-module
+.live-module, .new-comers-module
   .storey-box
     height 336px
     overflow hidden

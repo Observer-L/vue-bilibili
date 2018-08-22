@@ -49,8 +49,7 @@ export const onlineApi = {
 // 具体内容
 export const contentApi = {
   content () {
-    return axios.get(url.contet).then((response) => {
-      console.log(response.data)
+    return axios.get(url.content).then((response) => {
       return response.data
     })
   }

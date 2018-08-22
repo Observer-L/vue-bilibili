@@ -11,7 +11,7 @@ export const live = serverRoot + '/live'
 export const online = serverRoot + '/online'
 
 // 具体内容
-export const contet = serverRoot + '/ding'
+export const content = serverRoot + '/ding'
 
 // 三日排行
 export const contentrank = serverRoot + '/contentrank'

@@ -26,6 +26,7 @@ export default {
 .zoon-title
   padding-right 20px
   .headline
+    padding 0 0 15px
     .icon_t
       width 40px
       height 40px
