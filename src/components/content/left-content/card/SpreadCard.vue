@@ -10,10 +10,8 @@ spread-module
     @mouseover="showPreview(index)"
     @mouseout="hidePreview"
   >
-    <a
-      :href="'//www.bilibili.com/video/av' + item.aid || item.archive.aid"
-      target="_blank"
-    >
+    <a :href="'//www.bilibili.com/video/av' + item.aid || item.archive.aid" target="_blank">
+
       <div class="pic">
         <div class="lazy-img">
           <img :alt="item.name" :src="item.pic">
@@ -34,9 +32,13 @@ spread-module
           <p class="dm">测试预览弹幕</p>
           <p class="dm row2">测试预览弹幕row2</p>
         </div>
-        <span class="dur" v-if="item || item.archive" v-html="convertDur(item.duration || item.archive.duration)"></span>
+
+        <span class="dur" v-if="item.duration || item.archive" v-html="convertDur(item.duration ? item.duration : item.archive.duration ? item.archive.duration : 0)"></span>
+
         <div class="watch-later-trigger w-later"></div>
       </div>
+
+      <p class="t" v-if="item.archive" :title="item.name">{{item.name}}</p>
       <p class="t" :title="item.title">{{item.title}}</p>
       <p class="num" v-if="item.stat">
         <span class="play"><i class="icon"></i>{{item.stat.view}}</span>

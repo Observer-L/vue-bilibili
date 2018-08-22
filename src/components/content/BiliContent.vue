@@ -8,7 +8,7 @@
     <live></live>
     <!-- 主楼层 -->
     <template v-for="(row, index) of rows">
-      <floor :row="row" :key="index" :id="'bili_' + row.category"></floor>
+      <floor :category="sortKeys[index]" :categoryId="sortIds[index]" :row="row" :key="index" :id="'bili_' + row.category"></floor>
     </template>
     <!-- 底部推荐区 -->
     <special-recommend></special-recommend>
@@ -35,7 +35,9 @@ export default {
     ...mapGetters([
       'requesting',
       'error',
-      'rows'
+      'rows',
+      'sortKeys',
+      'sortIds'
     ])
   },
   mounted () {

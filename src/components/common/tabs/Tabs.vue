@@ -4,7 +4,8 @@
     v-for="(item, index) of tabs"
     :key="index"
     :class="['bili-tab-item', {'on': current === index}]"
-    @click="switchTab(index)"
+    @click="!hover && switchTab(index)"
+    @mouseenter="hover && switchTab(index)"
     >
       {{item}}
     </div>
@@ -14,7 +15,11 @@
 export default {
   name: 'Tabs',
   props: {
-    tabs: Array
+    tabs: Array,
+    hover: {
+      type: Boolean,
+      default: false
+    }
   },
   data () {
     return {
@@ -24,6 +29,7 @@ export default {
   methods: {
     switchTab (index) {
       this.current = index
+      this.$emit('switch-tabs', this.current)
     }
   }
 }

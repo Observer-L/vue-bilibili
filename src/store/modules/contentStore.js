@@ -57,7 +57,7 @@ const actions = {
     state,
     rootState
   }, categoryId) {
-    console.log(categoryId)
+    // console.log(categoryId)
     rootState.requesting = true
     commit(TYPE.CONTENT_RANK_REQUEST)
     let param = {
@@ -65,9 +65,6 @@ const actions = {
     }
     contentrankApi.contentrank(param).then((response) => {
       rootState.requesting = false
-      if (categoryId === 1) {
-        console.log(response)
-      }
       commit(TYPE.CONTENT_RANK_SUCCESS, response)
     }, (error) => {
       rootState.requesting = false
@@ -105,16 +102,6 @@ const mutations = {
       }
       state.rows.push(rowItem)
     }
-    // for(let key of state.sortKeys) {
-    //  // console.log(JSON.stringify(Object.values(response[key])))
-    //  let rowItem = {
-    //    categoty: 0,
-    //    key: response[key],
-    //    data: Object.values(response[key])
-    //  }
-    //  // state.rows.push(rowItem)
-    //  state.rows.push(Object.values(response[key]))
-    // }
   },
   [TYPE.CONTENT_FAILURE] (state) {
 

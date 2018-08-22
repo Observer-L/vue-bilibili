@@ -10,15 +10,6 @@ export const bannerApi = {
   }
 }
 
-// 排行榜
-export const rankApi = {
-  ranking3 () {
-    return axios.get(url.ranking3).then((response) => {
-      return response.data
-    })
-  }
-}
-
 // 推广
 export const promoteApi = {
   promote () {
@@ -55,13 +46,24 @@ export const contentApi = {
   }
 }
 
-// 具体内容的三日排行榜信息
+// 顶部推荐排行榜
+export const rankApi = {
+  ranking3 () {
+    return axios.get(url.ranking3).then((response) => {
+      return response.data
+    })
+  }
+}
+
+// 各分区排行榜信息
 export const contentrankApi = {
+  // 三日排行榜
   contentrank (param) {
     return axios.post(url.contentrank, param).then((response) => {
       return response.data
     })
   },
+  // 一周
   contentrankweek (param) {
     return axios.post(url.contentrankweek, param).then((response) => {
       return response.data

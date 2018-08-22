@@ -32,7 +32,7 @@ export const recommend = 'http://www.bilibili.com/index/recommend.json'
 // 番剧排行 13-3day.json
 // 音乐排行 3-3day.json
 // 舞蹈排行 129-3day.json
-// 游戏排行 3-3day.json
+// 游戏排行 4-3day.json
 // 科技排行 36-3day.json
 // 生活排行 160-3day.json
 // 鬼畜排行 119-3day.json
@@ -43,6 +43,7 @@ export const recommend = 'http://www.bilibili.com/index/recommend.json'
 // TV剧集排行 11-3day.json
 // 各分类下7日排行
 // 动画排行 1-week.json
+export const rankbase = 'http://www.bilibili.com/index/catalogy/'
 
 // 在线人数/最新投稿
 export const online = 'https://api.bilibili.com/x/web-interface/online'

@@ -1,10 +1,14 @@
 <template>
-  <div class="btn">
+  <div :class="{'btn': type !== 'more-link', 'bili-dropdown': type === 'dropdown'}">
     <div
       v-if="isDropdown"
     >
-      <!-- Todo -->
-      dropdown btn
+      <span class="selected">{{currentTimeline}}</span>
+      <i class="icon icon-arrow-down"></i>
+      <ul class="dropdown-list" @click="switchTimeline">
+        <li class="dropdown-item" style="display: none;">{{currentTimeline}}</li>
+        <li class="dropdown-item">{{currentTimeline === '三日' ? '一周' : '三日'}}</li>
+      </ul>
     </div>
     <a
       v-else
@@ -13,7 +17,7 @@
       :class="btnClass"
     >
       <i class="icon" v-if="floatPos === 'fl'"></i>
-      <span>{{text}}</span>
+        {{text}}
       <i class="icon" v-if="floatPos === 'fr'"></i>
     </a>
 </div>
@@ -37,15 +41,23 @@ export default {
     return {
       btnClass: this.type,
       isDropdown: this.type === 'dropdown',
-      floatPos: this.position === 'right' ? 'fr' : 'fl'
+      floatPos: this.position === 'right' ? 'fr' : 'fl',
+      currentTimeline: '三日'
+    }
+  },
+  methods: {
+    switchTimeline () {
+      let tl = this.currentTimeline
+      tl === '三日' ? this.currentTimeline = '一周' : tl === '一周' ? this.currentTimeline = '三日' : void 0
+      this.$emit('switch', this.currentTimeline)
     }
   },
   computed: {
     text () {
       if (this.type === 'more' || this.type === 'link-more') {
         return '更多'
-      } else if (this.type === 'dropdown') {
-        return ['三日', '一周']
+      } else if (this.type === 'more-link') {
+        return '查看更多'
       } else if (this.type === 'read-push') {
         return '666条新动态'
       }
@@ -88,4 +100,61 @@ export default {
   .more
     &:hover
       background #f0f0f0
+
+.more-link
+  display block
+  height 24px
+  line-height 24px
+  background-color #e5e9ef
+  text-align center
+  border 1px solid #e0e6ed
+  border-radius 4px
+  color #222
+  transition .2s
+  &:hover
+    background-color #ccd0d7
+    border-color #ccd0d7
+
+.bili-dropdown
+  position relative
+  display inline-block
+  vertical-align middle
+  background-color #fff
+  cursor pointer
+  padding 0 7px
+  height 22px
+  line-height 22px
+  border 1px solid #ccd0d7
+  border-radius 4px
+  &:hover
+    .dropdown-list
+      display block
+  .selected
+    display inline-block
+    vertical-align top
+  .icon-arrow-down
+    background-position -475px -157px
+    display inline-block
+    vertical-align middle
+    width 12px
+    height 6px
+    margin-left 5px
+    margin-top -1px
+  .dropdown-list
+    position absolute
+    width 100%
+    background #fff
+    border 1px solid #ccd0d7
+    border-top 0
+    left -1px
+    top 22px
+    z-index 10
+    display none
+    border-radius 0 0 4px 4px
+    .dropdown-item
+      cursor pointer
+      margin 0
+      padding 3px 7px
+      &:hover
+        background-color #e5e9ef
 </style>
