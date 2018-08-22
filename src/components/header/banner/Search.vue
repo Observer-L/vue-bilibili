@@ -46,7 +46,7 @@
         <li
           class="suggest-item"
           v-for="(item, index) of result"
-          :key="index"
+          :key="item.keyword"
         >
           <a :href="item.url" target="_blank">
             {{item.keyword}}

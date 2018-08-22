@@ -1,8 +1,17 @@
 .bili-wrapper
   margin 0 auto
   width 1160px
+  .l-con
+    float left
+    width 900px
+  .r-con
+    width 260px
+    float right
   @media screen and (max-width: 1400px)
-      width:980px
+    width:980px
+    .l-con
+      width 720px
+
 
 .primary-menu
   @media screen and (min-width: 1400px)
@@ -13,21 +22,3 @@
           margin 0 6px !important
         &.home
           margin-right 18px !important
-
-// .primary-menu .nav-menu .sub-nav {
-//     display: none;
-//     position: absolute;
-//     left: 0;
-//     overflow: hidden;
-//     top: 44px;
-//     background: #fff;
-//     border: 1px solid\9;
-//     border-top: 0;
-//     -webkit-box-shadow: rgba(0,0,0,.16) 0 2px 4px;
-//     box-shadow: 0 2px 4px rgba(0,0,0,.16);
-//     border-radius: 0 0 4px 4px;
-//     z-index: 2;
-// }
-// .primary-menu .nav-menu>li:hover .sub-nav {
-//     display: block;
-// }
