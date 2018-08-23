@@ -41,7 +41,7 @@ spread-module
       <p class="t" v-if="item.archive" :title="item.name">{{item.name}}</p>
       <p class="t" :title="item.title">{{item.title}}</p>
       <p class="num" v-if="item.stat">
-        <span class="play"><i class="icon"></i>{{item.stat.view}}</span>
+        <span class="play"><i class="icon"></i>{{item.stat.view | viewFormat}}</span>
         <span class="danmu"><i class="icon"></i>{{item.stat.danmaku}}</span>
       </p>
     </a>
@@ -56,7 +56,6 @@ export default {
     Preview
   },
   props: {
-    // list: Array
     item: Object,
     index: Number
   },

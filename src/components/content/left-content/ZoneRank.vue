@@ -19,7 +19,7 @@
             </div>
             <div class="ri-detail">
               <p class="ri-title">{{item.title}}</p>
-              <p class="ri-point">综合评分：{{item.pts}}</p>
+              <p class="ri-point">综合评分：{{item.pts | viewFormat}}</p>
             </div>
           </a>
         </li>
@@ -37,7 +37,7 @@
             </div>
             <div class="ri-detail">
               <p class="ri-title">{{item.title}}</p>
-              <p class="ri-point">综合评分：{{item.pts}}</p>
+              <p class="ri-point">综合评分：{{ item.pts | viewFormat }}</p>
             </div>
           </a>
         </li>

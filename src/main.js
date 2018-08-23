@@ -14,6 +14,13 @@ import Btn from 'common/btn'
 import Notification from 'common/notification'
 import Tabs from 'common/tabs'
 
+// 全局过滤器
+import * as custom from 'common/filters/custom'
+
+Object.keys(custom).forEach(key => {
+  Vue.filter(key, custom[key])
+})
+
 Vue.use(Btn)
 Vue.use(Notification)
 Vue.use(Tabs)
