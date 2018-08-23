@@ -21,6 +21,7 @@
               <p class="ri-title">{{item.title}}</p>
               <p class="ri-point">综合评分：{{item.pts | viewFormat}}</p>
             </div>
+            <WatchLater :target="item.aid"></WatchLater>
           </a>
         </li>
       </ul>
@@ -39,6 +40,7 @@
               <p class="ri-title">{{item.title}}</p>
               <p class="ri-point">综合评分：{{ item.pts | viewFormat }}</p>
             </div>
+            <WatchLater :target="item.aid"></WatchLater>
           </a>
         </li>
       </ul>
@@ -166,6 +168,9 @@ export default {
           position relative
           display block
           cursor pointer
+          &:hover
+            .w-later
+              display block
         .ri-preview
           margin-right 5px
           width 80px

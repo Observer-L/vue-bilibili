@@ -13,6 +13,7 @@ import './directives'
 import Btn from 'common/btn'
 import Notification from 'common/notification'
 import Tabs from 'common/tabs'
+import WatchLater from 'common/watchlater'
 
 // 全局过滤器
 import * as custom from 'common/filters/custom'
@@ -24,6 +25,7 @@ Object.keys(custom).forEach(key => {
 Vue.use(Btn)
 Vue.use(Notification)
 Vue.use(Tabs)
+Vue.use(WatchLater)
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios

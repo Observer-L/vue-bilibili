@@ -35,7 +35,7 @@ spread-module
 
         <span class="dur" v-if="item.duration || item.archive" v-html="convertDur(item.duration ? item.duration : item.archive.duration ? item.archive.duration : 0)"></span>
 
-        <div class="watch-later-trigger w-later"></div>
+        <WatchLater :target="item.aid || item.archive.aid"></WatchLater>
       </div>
 
       <p class="t" v-if="item.archive" :title="item.name">{{item.name}}</p>

@@ -8,7 +8,7 @@
         <p class="play">播放：{{item.play}}</p>
       </div>
     </a>
-    <div class="watch-later-trigger w-later"></div>
+    <WatchLater :target="item.aid"></WatchLater>
   </div>
 </template>
 <script>
