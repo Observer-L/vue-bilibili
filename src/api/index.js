@@ -55,6 +55,15 @@ export const rankApi = {
   }
 }
 
+// 底部特别推荐
+export const recommendApi = {
+  recommend () {
+    return axios.get(url.recommend).then((response) => {
+      return response.data
+    })
+  }
+}
+
 // 各分区排行榜信息
 export const contentrankApi = {
   // 三日排行榜

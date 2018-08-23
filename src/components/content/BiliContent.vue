@@ -19,7 +19,7 @@ import ChiefRecommend from './chief-recommend/ChiefRecommend'
 import HomePopularize from './popularize/HomePopularize'
 import Live from './live/Live'
 import Floor from './floor/Floor'
-import SpecialRecommend from './SpecialRecommend'
+import SpecialRecommend from './special-recommend/SpecialRecommend'
 
 import { mapGetters } from 'vuex'
 export default {

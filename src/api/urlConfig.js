@@ -17,3 +17,6 @@ export const content = serverRoot + '/ding'
 export const contentrank = serverRoot + '/contentrank'
 // 一周排行
 export const contentrankweek = serverRoot + '/contentrankweek'
+
+// 底部特别推荐
+export const recommend = serverRoot + '/recommend'

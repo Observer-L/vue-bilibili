@@ -1,14 +1,13 @@
 import Router from 'koa-router'
 import axios from 'axios'
 import {
-  online
+  recommend
 } from './urlConfig'
 
 const router = Router()
 
-// 主内容
-router.get('/online', async (ctx, next) => {
-  let response = await axios.get(online)
+router.get('/recommend', async (ctx, next) => {
+  let response = await axios.get(recommend)
   ctx.body = response.data
 })
 

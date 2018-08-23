@@ -3,13 +3,15 @@
     <i :class="['icon', 'icon_t', 'icon-' + cat]"></i>
 
     <span class="name" v-if="cat === 'promote'">推广</span>
+    <span class="name" v-else>{{text}}</span>
+    <btn v-if="link" type="link-more" :link="link"></btn>
+
     <template v-if="cat === 'live'">
       <a href="//live.bilibili.com/" target="_blank" class="name">正在直播</a>
       <p class="online">当前共有<span>{{online_total}}</span>个在线直播</p>
       <a :href="text_link.link" target="_blank" class="fire"><i class="icon pmt-icon"></i>
         {{text_link.text}}
       </a>
-      <btn type="link-more" link="https://live.bilibili.com/"></btn>
     </template>
   </div>
 </template>
@@ -21,6 +23,12 @@ export default {
     cat: {
       type: String,
       required: true
+    },
+    text: {
+      type: String
+    },
+    link: {
+      type: String
     }
   },
   computed: {
