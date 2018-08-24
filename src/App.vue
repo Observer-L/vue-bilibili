@@ -3,10 +3,11 @@
     <bili-header></bili-header>
     <bili-content :rows="rows"></bili-content>
     <side-nav @toggleMask="toggleMask" :options="options" :rows="rows" :isSort="isSort"></side-nav>
-
+    <bili-footer></bili-footer>
     <transition name="fade">
       <div class="elevator-mask" v-if="isSort" @click="toggleMask(false)"></div>
     </transition>
+
   </div>
 </template>
 
@@ -14,6 +15,7 @@
 import BiliHeader from './components/header/BiliHeader'
 import BiliContent from './components/content/BiliContent'
 import SideNav from './components/side-nav/SideNav'
+import BiliFooter from './components/footer/Footer'
 
 import { mapGetters } from 'vuex'
 export default {
@@ -21,7 +23,8 @@ export default {
   components: {
     BiliHeader,
     BiliContent,
-    SideNav
+    SideNav,
+    BiliFooter
   },
   data () {
     return {
