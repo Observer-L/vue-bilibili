@@ -98,10 +98,14 @@ const mutations = {
         categoryId: state.sortIds[i],
         name: state.sortValues[i],
         b_id: `b_${category}`,
-        item: Object.values(response[category])
+        item: Object.values(response[category]),
+        index: i
       }
       state.rows.push(rowItem)
     }
+  },
+  local (state, response) {
+    state.rows = response
   },
   [TYPE.CONTENT_FAILURE] (state) {
 

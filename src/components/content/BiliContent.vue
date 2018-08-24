@@ -24,6 +24,9 @@ import SpecialRecommend from './special-recommend/SpecialRecommend'
 import { mapGetters } from 'vuex'
 export default {
   name: 'BiliContent',
+  props: {
+    rows: Array
+  },
   components: {
     ChiefRecommend,
     HomePopularize,
@@ -35,13 +38,9 @@ export default {
     ...mapGetters([
       'requesting',
       'error',
-      'rows',
       'sortKeys',
       'sortIds'
     ])
-  },
-  mounted () {
-    this.$store.dispatch('getContentRows')
   }
 }
 </script>
